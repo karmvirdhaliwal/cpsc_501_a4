@@ -68,9 +68,9 @@ def prepData():
 trainingData, testingData = prepData()
 
 #technically a length of 784, 1 layer, 10 neurons
-net = network.Network([784,10,10])
+net = network.Network([784,25,25,25,10])
 before = time.perf_counter()
-net.SGD(trainingData, 10, 10, 10, test_data = testingData)
+net.SGD(trainingData, 50, 5, 0.5, test_data = testingData)
 after = time.perf_counter()
 
 print(f"Finished in {after - before:0.4f} seconds")
