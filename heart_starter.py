@@ -143,7 +143,7 @@ trainingData, testingData = prepData()
 
 net = network.Network([9,10,2])
 before = time.perf_counter()
-net.SGD(trainingData, 10, 10, 0.1, test_data = testingData)
+net.SGD(trainingData, 16, 10, .5, test_data = testingData)
 after = time.perf_counter()
 
 print(f"Finished in {after - before:0.4f} seconds")
