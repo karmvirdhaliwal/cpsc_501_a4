@@ -88,9 +88,9 @@ def prepData():
 
 trainingData, testingData = prepData()
 
-net = network.Network([784,10,10])
+net = network.Network([784,25,25,25,10])
 before = time.perf_counter()
-net.SGD(trainingData, 16, 10, 1, test_data = testingData)
+net.SGD(trainingData, 50, 5, 0.75, test_data = testingData)
 
 after = time.perf_counter()
 
